@@ -13,10 +13,14 @@ from sklearn.metrics import (
 )
 import os
 import json
+import dagshub
 from mlFlowProject.entity.config_entity import ModelEvaluationConfig
 
 from dotenv import load_dotenv
 load_dotenv()
+
+
+dagshub.init(repo_owner='shreyojitdas95', repo_name='Deploying-Customer-Churn-model', mlflow=True)
 
 os.environ["MLFLOW_TRACKING_URI"] = os.environ.get("MLFLOW_TRACKING_URI")
 os.environ["MLFLOW_TRACKING_USERNAME"] = os.environ.get("MLFLOW_TRACKING_USERNAME")
@@ -51,6 +55,8 @@ class ModelEvaluation:
 
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+
+        mlflow.set_experiment(self.config.experiment_name)
 
         with mlflow.start_run():
             # Log tags

@@ -836,3 +836,58 @@ x==========x]
 [2025-02-06 18:03:02,316: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
 
 x==========x]
+[2025-02-06 18:22:10,444: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 18:22:10,447: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 18:22:10,830: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 18:22:11,176: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 18:22:11,177: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 18:22:11,177: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 18:22:11,177: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 18:22:11,181: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 18:22:11,182: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 18:22:11,183: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 18:22:11,183: INFO: common: created directory at: artifacts]
+[2025-02-06 18:22:11,183: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 18:22:11,183: INFO: data_ingestion: File already exists of size: ~ 262 KB]
+[2025-02-06 18:22:11,187: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-06 18:22:11,187: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 18:22:11,189: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 18:22:11,190: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 18:22:11,191: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 18:22:11,191: INFO: common: created directory at: artifacts]
+[2025-02-06 18:22:11,191: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 18:22:11,204: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 18:22:11,204: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-02-06 18:22:11,206: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 18:22:11,207: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 18:22:11,208: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 18:22:11,208: INFO: common: created directory at: artifacts]
+[2025-02-06 18:22:11,208: INFO: common: created directory at: artifacts/data_transformation]
+[2025-02-06 18:22:12,408: INFO: data_transformation: Data split into training and test sets]
+[2025-02-06 18:22:12,408: INFO: data_transformation: Shape of preprocessed training data: (7498, 30)]
+[2025-02-06 18:22:12,408: INFO: data_transformation: Shape of preprocessed test data: (2500, 30)]
+[2025-02-06 18:22:12,408: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 18:22:12,408: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-02-06 18:22:12,411: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 18:22:12,411: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 18:22:12,412: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 18:22:12,413: INFO: common: created directory at: artifacts]
+[2025-02-06 18:22:12,413: INFO: common: created directory at: artifacts/model_trainer]
+[2025-02-06 18:22:13,100: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-02-06 18:22:13,100: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-02-06 18:22:13,103: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 18:22:13,103: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 18:22:13,104: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 18:22:13,105: INFO: common: created directory at: artifacts]
+[2025-02-06 18:22:13,105: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-02-06 18:22:34,226: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
