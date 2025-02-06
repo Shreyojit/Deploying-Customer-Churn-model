@@ -39,6 +39,7 @@ class ModelTrainerConfig:
     target_column: str
 
 
+
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
     root_dir: Path
@@ -48,3 +49,8 @@ class ModelEvaluationConfig:
     metric_file_name: Path
     target_column: str
     mlflow_uri: str
+    registered_model_name: str  # Added for specifying MLflow model registration
+    experiment_name: str  # Added to track different MLflow experiments
+    run_name: str  # Optional: Naming specific runs in MLflow
+    save_local_metrics: bool  # Boolean flag to save metrics locally as JSON
+    confusion_matrix_file: Path  # New attribute for confusion matrix file path

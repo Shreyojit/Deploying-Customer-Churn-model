@@ -99,13 +99,16 @@ class ConfigurationManager:
         create_directories([config.root_dir])
 
         model_evaluation_config = ModelEvaluationConfig(
-            root_dir=config.root_dir,
-            test_data_path=config.test_data_path,
-            model_path = config.model_path,
-            all_params=params,
-            metric_file_name = config.metric_file_name,
-            target_column = schema.name,
-            mlflow_uri="https://dagshub.com/Oyebamiji-Micheal/End-to-End-Customer-Churn-Prediction-using-MLflow-and-DVC.mlflow",  
+        root_dir=config.root_dir,
+        test_data_path=config.test_data_path,
+        model_path=config.model_path,
+        all_params=params,
+        metric_file_name=config.metric_file_name,
+        target_column=schema.name,
+        mlflow_uri="https://dagshub.com/shreyojitdas95/Deploying-Customer-Churn-model.mlflow",
+        confusion_matrix_file=config.confusion_matrix_file,  # Add this line
+        roc_curve_file=config.roc_curve_file  # Add this line
+
         )
 
         return model_evaluation_config
