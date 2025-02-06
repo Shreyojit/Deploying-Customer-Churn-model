@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: mlFlowProject
+Version: 0.0.0
+Summary: An end to end machine learning project implementation
+Home-page: https://github.com/Shreyojit das/End-to-End-Customer-Churn-Prediction-using-MLflow-and-DVC
+Author: Shreyojit das
+Author-email: shreyojitdas95@gmail.com
+Project-URL: Bug Tracker, https://github.com/Shreyojit das/End-to-End-Customer-Churn-Prediction-using-MLflow-and-DVC/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# Deploying Customer Churn Model
+
+This project demonstrates how to deploy a machine learning model for customer churn prediction using MLflow and DVC.
+
+## Installation
+
+To install the project, run:
+
+```bash
+pip install -e .
