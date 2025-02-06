@@ -27,3 +27,6 @@ artifacts/*
 dvc.lock
 .dvc/
 .dvcignore
+
+
+mlruns/*

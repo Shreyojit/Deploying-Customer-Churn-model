@@ -1,30 +1,22 @@
-from pathlib import Path
-import os
-from urllib.parse import urlparse
-
-import numpy as np
+import mlflow
+import joblib
 import pandas as pd
 import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
-import joblib
+from pathlib import Path
+from urllib.parse import urlparse
+from dataclasses import dataclass
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score, 
     confusion_matrix, roc_curve, auc
 )
-
+import os
 import json
-
-
-import mlflow
-import mlflow.sklearn
-
 from mlFlowProject.entity.config_entity import ModelEvaluationConfig
-from mlFlowProject.utils.common import save_json
 
 from dotenv import load_dotenv
-load_dotenv() 
-
+load_dotenv()
 
 os.environ["MLFLOW_TRACKING_URI"] = os.environ.get("MLFLOW_TRACKING_URI")
 os.environ["MLFLOW_TRACKING_USERNAME"] = os.environ.get("MLFLOW_TRACKING_USERNAME")
