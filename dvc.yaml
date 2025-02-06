@@ -2,7 +2,7 @@ stages:
   data_ingestion:
     cmd: python src/mlFlowProject/pipeline/stage_01_data_ingestion.py
     deps:
-      - src/mlFlowProject/pipeline/stage_01_data_ingestion.py 
+      - src/mlFlowProject/pipeline/stage_01_data_ingestion.py
       - src/mlFlowProject/components/data_ingestion.py
       - config/config.yaml
     outs:
@@ -45,7 +45,7 @@ stages:
       - LightGBM.max_depth
     outs:
       - artifacts/model_trainer/model.joblib
-    
+
   model_evaluation:
     cmd: python src/mlFlowProject/pipeline/stage_05_model_evaluation.py
     deps:
@@ -54,11 +54,12 @@ stages:
       - artifacts/data_transformation/test.csv
       - artifacts/model_trainer/model.joblib
       - config/config.yaml
+      - schema.yaml  # Added as it might be used for target column validation
+    params:
+      - LightGBM.n_estimators
+      - LightGBM.num_leaves
+      - LightGBM.learning_rate
+      - LightGBM.max_depth
     metrics:
       - artifacts/model_evaluation/metrics.json:
           cache: false
-    outs:
-      - artifacts/model_evaluation/metrics.json
-      - artifacts/model_evaluation/confusion_matrix.png
-      - artifacts/model_evaluation/roc_curve.png
-            

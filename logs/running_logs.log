@@ -891,3 +891,84 @@ x==========x]
 [2025-02-06 18:22:34,226: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
 
 x==========x]
+[2025-02-06 19:31:37,402: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 19:31:37,404: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 19:31:37,405: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 19:31:37,406: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 19:31:37,406: INFO: common: created directory at: artifacts]
+[2025-02-06 19:31:37,406: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 19:31:37,406: INFO: data_ingestion: File already exists of size: ~ 262 KB]
+[2025-02-06 19:31:37,409: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-06 19:31:37,834: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 19:31:37,836: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 19:31:37,837: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 19:31:37,838: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 19:31:37,838: INFO: common: created directory at: artifacts]
+[2025-02-06 19:31:37,838: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 19:31:37,851: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 19:31:38,532: INFO: stage_03_data_transformation: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-02-06 19:31:38,535: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 19:31:38,535: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 19:31:38,536: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 19:31:38,536: INFO: common: created directory at: artifacts]
+[2025-02-06 19:31:38,536: INFO: common: created directory at: artifacts/data_transformation]
+[2025-02-06 19:31:39,775: INFO: data_transformation: Data split into training and test sets]
+[2025-02-06 19:31:39,775: INFO: data_transformation: Shape of preprocessed training data: (7498, 30)]
+[2025-02-06 19:31:39,775: INFO: data_transformation: Shape of preprocessed test data: (2500, 30)]
+[2025-02-06 19:31:39,775: INFO: stage_03_data_transformation: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 19:31:40,954: INFO: stage_04_model_trainer: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-02-06 19:31:40,956: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 19:31:40,957: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 19:31:40,957: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 19:31:40,958: INFO: common: created directory at: artifacts]
+[2025-02-06 19:31:40,958: INFO: common: created directory at: artifacts/model_trainer]
+[2025-02-06 19:31:41,629: INFO: stage_04_model_trainer: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-02-06 19:59:50,123: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 19:59:50,126: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 19:59:50,126: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 19:59:50,127: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 19:59:50,127: INFO: common: created directory at: artifacts]
+[2025-02-06 19:59:50,127: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 19:59:51,025: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Server: GitHub.com
+Date: Thu, 06 Feb 2025 14:29:50 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"087e7a55877f24d2d6c9c6a7a65e6d17"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ github.com/webpack/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Accept-Ranges: bytes
+Set-Cookie: _gh_sess=tkP7VSiJI%2FxrlbtrRiEccmIx9oo4a99K%2FwZ3plImFdN22NHtAcGVGaaD8SCTbQbjoEOspvNbcgqq6ckwTgYJZGsnatPuaD0bg8xm%2FlYlA2DIesZ3h1PoBHDMyB9ZuUs5Ny2dDJ8OmgyZc63PHYPvQuXJgusgxYxccuEur0dlm8Zv4OPquNs7yTlzmKl%2FBwmfQwJW4PhRAdaHRgFMOa%2FQ0TCUCFZXcKC8NQL4ATVIZO%2F5azMOdddDwWTT57JBIwEBuzzHlQL4RWgjGX6i%2BgHnLA%3D%3D--X864W7DhJHMoVqmC--hSIljJyM8%2B05aeQybixuWQ%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1597599463.1738852190; Path=/; Domain=github.com; Expires=Fri, 06 Feb 2026 14:29:50 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Fri, 06 Feb 2026 14:29:50 GMT; HttpOnly; Secure; SameSite=Lax
+X-GitHub-Request-Id: E188:1C037D:FDCADD:13089E7:67A4C75E
+connection: close
+Transfer-Encoding: chunked
+
+]
+[2025-02-06 19:59:51,025: ERROR: stage_01_data_ingestion: File is not a zip file]
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 26, in <module>
+    obj.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1268, in __init__
+    self._RealGetContents()
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1335, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
