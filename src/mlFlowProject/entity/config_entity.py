@@ -54,3 +54,17 @@ class ModelEvaluationConfig:
     run_name: str  # Optional: Naming specific runs in MLflow
     save_local_metrics: bool  # Boolean flag to save metrics locally as JSON
     confusion_matrix_file: Path  # New attribute for confusion matrix file path
+    roc_curve_file: Path
+
+
+# @dataclass(frozen=True)
+# class ModelEvaluationConfig:
+#     root_dir: Path
+#     test_data_path: Path
+#     model_path: Path
+#     all_params: dict
+#     metric_file_name: Path
+#     target_column: str
+#     mlflow_uri: str
+#     confusion_matrix_file: str
+#     roc_curve_file: str

@@ -107,7 +107,11 @@ class ConfigurationManager:
         target_column=schema.name,
         mlflow_uri="https://dagshub.com/shreyojitdas95/Deploying-Customer-Churn-model.mlflow",
         confusion_matrix_file=config.confusion_matrix_file,  # Add this line
-        roc_curve_file=config.roc_curve_file  # Add this line
+        roc_curve_file=config.roc_curve_file,
+        registered_model_name="LightGBM",
+        experiment_name="CustomerChurnExperiment",  # Add experiment_name
+        run_name="ChurnEvaluationRun",       # Add this line
+        save_local_metrics=True
 
         )
 
