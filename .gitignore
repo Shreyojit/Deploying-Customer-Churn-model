@@ -24,7 +24,7 @@ __pycache__/
 artifacts/*
 
 # DVC
-dvc.lock
+
 .dvc/
 .dvcignore
 
