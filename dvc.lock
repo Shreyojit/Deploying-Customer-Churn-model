@@ -1,0 +1,130 @@
+schema: '2.0'
+stages:
+  data_validation:
+    cmd: python src/mlFlowProject/pipeline/stage_02_data_validation.py
+    deps:
+    - path: artifacts/data_ingestion/Churn_Modelling.csv
+      hash: md5
+      md5: b9ba4ddb73f8cbf371c60378e12bc669
+      size: 685003
+    - path: config/config.yaml
+      hash: md5
+      md5: e47f017de66580f6056ef5d31403207b
+      size: 1513
+    - path: schema.yaml
+      hash: md5
+      md5: 7602f554f2724348fd1d3c8207987f9d
+      size: 329
+    - path: src/mlFlowProject/components/data_validation.py
+      hash: md5
+      md5: 42d04106ec934d4e8c7a88236888c945
+      size: 1264
+    - path: src/mlFlowProject/pipeline/stage_02_data_validation.py
+      hash: md5
+      md5: 95633b1c5199a34aac2652d681255897
+      size: 857
+    outs:
+    - path: artifacts/data_validation/status.txt
+      hash: md5
+      md5: 86e6a2f694c57a675b3e2da6b95ff9ba
+      size: 23
+  data_transformation:
+    cmd: python src/mlFlowProject/pipeline/stage_03_data_transformation.py
+    deps:
+    - path: artifacts/data_validation/status.txt
+      hash: md5
+      md5: 86e6a2f694c57a675b3e2da6b95ff9ba
+      size: 23
+    - path: config/config.yaml
+      hash: md5
+      md5: e47f017de66580f6056ef5d31403207b
+      size: 1513
+    - path: src/mlFlowProject/components/data_transformation.py
+      hash: md5
+      md5: 76b91f356967c593ae2b150ef4dd189a
+      size: 6576
+    - path: src/mlFlowProject/pipeline/stage_03_data_transformation.py
+      hash: md5
+      md5: ca9089d8f177b69a0fa850f265e6116d
+      size: 1277
+    outs:
+    - path: artifacts/data_transformation/preprocessor.joblib
+      hash: md5
+      md5: 0385a818689194bacaea3cef051f6438
+      size: 5319
+    - path: artifacts/data_transformation/test.csv
+      hash: md5
+      md5: 1fb06008aa8b0c03a5f941703529ef2f
+      size: 497010
+    - path: artifacts/data_transformation/train.csv
+      hash: md5
+      md5: e9c51c3767a63d5aa0495524a4241edf
+      size: 1487857
+  model_training:
+    cmd: python src/mlFlowProject/pipeline/stage_04_model_trainer.py
+    deps:
+    - path: artifacts/data_transformation/train.csv
+      hash: md5
+      md5: e9c51c3767a63d5aa0495524a4241edf
+      size: 1487857
+    - path: config/config.yaml
+      hash: md5
+      md5: e47f017de66580f6056ef5d31403207b
+      size: 1513
+    - path: src/mlFlowProject/components/model_trainer.py
+      hash: md5
+      md5: 43e708a2aba7b326175c73b2ee60373b
+      size: 1009
+    - path: src/mlFlowProject/pipeline/stage_04_model_trainer.py
+      hash: md5
+      md5: aeda12c72c0c140e274e4d7e549f743e
+      size: 834
+    params:
+      params.yaml:
+        LightGBM.learning_rate: 0.025
+        LightGBM.max_depth: 15
+        LightGBM.n_estimators: 1000
+        LightGBM.num_leaves: 50
+    outs:
+    - path: artifacts/model_trainer/model.joblib
+      hash: md5
+      md5: 922ffe3941b47746f7fcda46e822c097
+      size: 5471668
+  model_evaluation:
+    cmd: python src/mlFlowProject/pipeline/stage_05_model_evaluation.py
+    deps:
+    - path: artifacts/data_transformation/test.csv
+      hash: md5
+      md5: 1fb06008aa8b0c03a5f941703529ef2f
+      size: 497010
+    - path: artifacts/model_trainer/model.joblib
+      hash: md5
+      md5: 922ffe3941b47746f7fcda46e822c097
+      size: 5471668
+    - path: config/config.yaml
+      hash: md5
+      md5: e47f017de66580f6056ef5d31403207b
+      size: 1513
+    - path: schema.yaml
+      hash: md5
+      md5: 7602f554f2724348fd1d3c8207987f9d
+      size: 329
+    - path: src/mlFlowProject/components/model_evaluation.py
+      hash: md5
+      md5: 7df561e7261c4b23cf1988ba31458d21
+      size: 4763
+    - path: src/mlFlowProject/pipeline/stage_05_model_evaluation.py
+      hash: md5
+      md5: ca41402cfc4649c88a5ccd2043cab82b
+      size: 877
+    params:
+      params.yaml:
+        LightGBM.learning_rate: 0.025
+        LightGBM.max_depth: 15
+        LightGBM.n_estimators: 1000
+        LightGBM.num_leaves: 50
+    outs:
+    - path: artifacts/model_evaluation/metrics.json
+      hash: md5
+      md5: ce6494628e175a93119937b757c43d12
+      size: 128

@@ -1,12 +1,4 @@
 stages:
-  data_ingestion:
-    cmd: python src/mlFlowProject/pipeline/stage_01_data_ingestion.py
-    deps:
-      - src/mlFlowProject/pipeline/stage_01_data_ingestion.py
-      - src/mlFlowProject/components/data_ingestion.py
-      - config/config.yaml
-    outs:
-      - artifacts/data_ingestion/Churn_Modelling.csv
 
   data_validation:
     cmd: python src/mlFlowProject/pipeline/stage_02_data_validation.py

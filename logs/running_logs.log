@@ -972,3 +972,346 @@ Traceback (most recent call last):
   File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1335, in _RealGetContents
     raise BadZipFile("File is not a zip file")
 zipfile.BadZipFile: File is not a zip file
+[2025-02-06 20:05:39,532: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:05:39,535: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:05:39,535: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:05:39,536: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:05:39,536: INFO: common: created directory at: artifacts]
+[2025-02-06 20:05:39,536: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:05:39,536: INFO: data_ingestion: File already exists of size: ~ 222 KB]
+[2025-02-06 20:05:39,536: ERROR: stage_01_data_ingestion: File is not a zip file]
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 26, in <module>
+    obj.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_ingestion.py", line 35, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1268, in __init__
+    self._RealGetContents()
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1335, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-02-06 20:12:13,979: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:12:13,981: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:12:14,402: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:12:14,774: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:12:14,775: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:12:14,775: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:12:14,775: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:12:14,778: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:12:14,778: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:12:14,779: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:12:14,779: INFO: common: created directory at: artifacts]
+[2025-02-06 20:12:14,779: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:12:14,779: INFO: data_ingestion: File already exists of size: ~ 222 KB]
+[2025-02-06 20:12:14,780: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_ingestion.py", line 68, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1268, in __init__
+    self._RealGetContents()
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1335, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-02-06 20:13:11,860: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:13:11,862: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:13:12,269: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:13:12,629: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:13:12,630: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:13:12,631: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:13:12,631: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:13:12,633: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:13:12,633: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:13:12,634: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:13:12,635: INFO: common: created directory at: artifacts]
+[2025-02-06 20:13:12,635: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:13:13,990: INFO: data_ingestion: File downloaded to artifacts/data_ingestion/data.zip]
+[2025-02-06 20:13:13,991: ERROR: main: File is not a zip file]
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_ingestion.py", line 68, in extract_zip_file
+    with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1268, in __init__
+    self._RealGetContents()
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/zipfile.py", line 1335, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+[2025-02-06 20:16:58,021: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:16:58,023: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:16:58,412: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:16:58,757: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:16:58,758: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:16:58,759: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:16:58,759: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:16:58,761: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:16:58,762: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:16:58,763: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:16:58,763: INFO: common: created directory at: artifacts]
+[2025-02-06 20:16:58,763: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:16:58,763: ERROR: main: list index out of range]
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/main.py", line 14, in <module>
+    data_ingestion.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.download_file()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_ingestion.py", line 30, in download_file
+    file_id = self.config.source_URL.split('/d/')[1].split('/')[0]  # Extract file ID
+IndexError: list index out of range
+[2025-02-06 20:20:04,785: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:20:04,787: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:20:05,292: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:20:05,684: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:20:05,686: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:20:05,686: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:20:05,686: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:20:05,688: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:20:05,689: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:20:05,690: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:20:05,690: INFO: common: created directory at: artifacts]
+[2025-02-06 20:20:05,690: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:20:05,690: INFO: data_ingestion: Extracted file ID: 1M71W_DvMCCmRL373qVG3-8dHJtiy8e4H]
+[2025-02-06 20:20:07,089: INFO: data_ingestion: File downloaded successfully: artifacts/data_ingestion/data.zip]
+[2025-02-06 20:20:07,089: ERROR: data_ingestion: File artifacts/data_ingestion/data.zip is not a valid zip file.]
+[2025-02-06 20:20:07,089: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:20:07,089: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 20:20:07,092: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:20:07,092: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:20:07,093: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:20:07,093: INFO: common: created directory at: artifacts]
+[2025-02-06 20:20:07,093: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 20:20:07,094: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/Churn_Modelling.csv']
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/main.py", line 24, in <module>
+    data_ingestion.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_02_data_validation.py", line 17, in main
+    data_validation.validate_all_columns()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/Churn_Modelling.csv'
+[2025-02-06 20:22:14,286: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:22:14,288: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:22:14,673: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:22:15,022: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:22:15,023: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:22:15,024: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:22:15,024: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:22:15,026: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:22:15,026: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:22:15,027: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:22:15,028: INFO: common: created directory at: artifacts]
+[2025-02-06 20:22:15,028: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:22:15,028: INFO: data_ingestion: File already exists of size: ~ 826 KB]
+[2025-02-06 20:22:15,028: ERROR: data_ingestion: File artifacts/data_ingestion/data.zip is not a valid zip file.]
+[2025-02-06 20:22:15,028: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:22:15,028: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 20:22:15,030: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:22:15,030: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:22:15,031: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:22:15,032: INFO: common: created directory at: artifacts]
+[2025-02-06 20:22:15,032: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 20:22:15,032: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/Churn_Modelling.csv']
+Traceback (most recent call last):
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/main.py", line 24, in <module>
+    data_ingestion.main()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/pipeline/stage_02_data_validation.py", line 17, in main
+    data_validation.validate_all_columns()
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_validation.py", line 37, in validate_all_columns
+    raise e
+  File "/home2/cslab/Music/Mtech-projects/Deploying-Customer-Churn-model/src/mlFlowProject/components/data_validation.py", line 16, in validate_all_columns
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home2/cslab/miniconda3/envs/cancer_detection/lib/python3.9/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/Churn_Modelling.csv'
+[2025-02-06 20:23:08,189: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:23:08,192: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:23:08,667: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:23:09,019: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:23:09,020: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:23:09,021: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:23:09,021: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 20:23:09,023: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:23:09,024: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:23:09,025: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:23:09,025: INFO: common: created directory at: artifacts]
+[2025-02-06 20:23:09,025: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 20:23:09,025: INFO: data_ingestion: File already exists of size: ~ 262 KB]
+[2025-02-06 20:23:09,028: INFO: data_ingestion: Extracted zip file to: artifacts/data_ingestion]
+[2025-02-06 20:23:09,028: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:23:09,028: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 20:23:09,031: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:23:09,032: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:23:09,033: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:23:09,034: INFO: common: created directory at: artifacts]
+[2025-02-06 20:23:09,034: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 20:23:09,047: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:23:09,047: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-02-06 20:23:09,049: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:23:09,050: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:23:09,051: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:23:09,051: INFO: common: created directory at: artifacts]
+[2025-02-06 20:23:09,051: INFO: common: created directory at: artifacts/data_transformation]
+[2025-02-06 20:23:10,306: INFO: data_transformation: Data split into training and test sets]
+[2025-02-06 20:23:10,307: INFO: data_transformation: Shape of preprocessed training data: (7498, 30)]
+[2025-02-06 20:23:10,307: INFO: data_transformation: Shape of preprocessed test data: (2500, 30)]
+[2025-02-06 20:23:10,307: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:23:10,307: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-02-06 20:23:10,309: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:23:10,310: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:23:10,311: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:23:10,311: INFO: common: created directory at: artifacts]
+[2025-02-06 20:23:10,311: INFO: common: created directory at: artifacts/model_trainer]
+[2025-02-06 20:23:10,965: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:23:10,965: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-02-06 20:23:10,968: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:23:10,968: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:23:10,969: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:23:10,969: INFO: common: created directory at: artifacts]
+[2025-02-06 20:23:10,969: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-02-06 20:23:25,999: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:23:59,650: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 20:23:59,652: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:23:59,652: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:23:59,653: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:23:59,654: INFO: common: created directory at: artifacts]
+[2025-02-06 20:23:59,654: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 20:23:59,667: INFO: stage_02_data_validation: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:24:00,388: INFO: stage_03_data_transformation: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-02-06 20:24:00,391: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:24:00,392: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:24:00,393: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:24:00,393: INFO: common: created directory at: artifacts]
+[2025-02-06 20:24:00,393: INFO: common: created directory at: artifacts/data_transformation]
+[2025-02-06 20:24:01,603: INFO: data_transformation: Data split into training and test sets]
+[2025-02-06 20:24:01,603: INFO: data_transformation: Shape of preprocessed training data: (7498, 30)]
+[2025-02-06 20:24:01,603: INFO: data_transformation: Shape of preprocessed test data: (2500, 30)]
+[2025-02-06 20:24:01,603: INFO: stage_03_data_transformation: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:24:02,839: INFO: stage_04_model_trainer: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-02-06 20:24:02,841: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:24:02,841: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:24:02,842: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:24:02,842: INFO: common: created directory at: artifacts]
+[2025-02-06 20:24:02,843: INFO: common: created directory at: artifacts/model_trainer]
+[2025-02-06 20:24:03,489: INFO: stage_04_model_trainer: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-02-06 20:24:05,811: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:24:05,814: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 20:24:06,219: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 20:24:06,575: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 20:24:06,576: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 20:24:06,577: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 20:24:06,577: INFO: stage_05_model_evaluation: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-02-06 20:24:06,579: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 20:24:06,580: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 20:24:06,581: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 20:24:06,581: INFO: common: created directory at: artifacts]
+[2025-02-06 20:24:06,581: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-02-06 20:24:21,875: INFO: stage_05_model_evaluation: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 23:10:17,679: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 23:10:17,683: INFO: helpers: Accessing as shreyojitdas95]
+[2025-02-06 23:10:18,101: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/shreyojitdas95/Deploying-Customer-Churn-model "HTTP/1.1 200 OK"]
+[2025-02-06 23:10:18,450: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-02-06 23:10:18,451: INFO: helpers: Initialized MLflow to track repo "shreyojitdas95/Deploying-Customer-Churn-model"]
+[2025-02-06 23:10:18,451: INFO: helpers: Repository shreyojitdas95/Deploying-Customer-Churn-model initialized!]
+[2025-02-06 23:10:18,451: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-02-06 23:10:18,454: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 23:10:18,456: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 23:10:18,457: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 23:10:18,457: INFO: common: created directory at: artifacts]
+[2025-02-06 23:10:18,457: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-02-06 23:10:18,457: INFO: data_ingestion: File already exists of size: ~ 262 KB]
+[2025-02-06 23:10:18,462: INFO: data_ingestion: Extracted zip file to: artifacts/data_ingestion]
+[2025-02-06 23:10:18,463: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-02-06 23:10:18,463: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-02-06 23:10:18,467: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 23:10:18,468: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 23:10:18,470: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 23:10:18,470: INFO: common: created directory at: artifacts]
+[2025-02-06 23:10:18,470: INFO: common: created directory at: artifacts/data_validation]
+[2025-02-06 23:10:18,486: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 23:10:18,486: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-02-06 23:10:18,488: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 23:10:18,488: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 23:10:18,489: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 23:10:18,490: INFO: common: created directory at: artifacts]
+[2025-02-06 23:10:18,490: INFO: common: created directory at: artifacts/data_transformation]
+[2025-02-06 23:10:19,795: INFO: data_transformation: Data split into training and test sets]
+[2025-02-06 23:10:19,795: INFO: data_transformation: Shape of preprocessed training data: (7498, 30)]
+[2025-02-06 23:10:19,795: INFO: data_transformation: Shape of preprocessed test data: (2500, 30)]
+[2025-02-06 23:10:19,795: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-02-06 23:10:19,795: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-02-06 23:10:19,798: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 23:10:19,798: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 23:10:19,799: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 23:10:19,799: INFO: common: created directory at: artifacts]
+[2025-02-06 23:10:19,799: INFO: common: created directory at: artifacts/model_trainer]
+[2025-02-06 23:10:20,513: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-02-06 23:10:20,515: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-02-06 23:10:20,517: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-02-06 23:10:20,518: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-02-06 23:10:20,519: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-02-06 23:10:20,519: INFO: common: created directory at: artifacts]
+[2025-02-06 23:10:20,519: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-02-06 23:10:37,523: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-02-07 10:13:42,308: INFO: prediction: Loading preprocessor from artifacts/data_transformation/preprocessor.joblib]
+[2025-02-07 10:13:42,990: INFO: prediction: Loading model from artifacts/model_trainer/model.joblib]
+[2025-02-07 10:13:43,279: INFO: prediction: Transforming input data using preprocessor]
+[2025-02-07 10:13:44,115: INFO: prediction: Making predictions using the model]
