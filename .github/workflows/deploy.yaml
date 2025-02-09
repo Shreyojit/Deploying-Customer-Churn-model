@@ -1,0 +1,62 @@
+name: Deploy Flask to GKE
+on:
+  push:
+    branches: [ main ]
+
+env:
+  GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GCP_TF_STATE_BUCKET: ${{ secrets.GCP_TF_STATE_BUCKET }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      IMAGE_TAG: ${{ github.sha }}
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Authenticate to GCP using Service Account Key
+    - name: Authenticate to GCP
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+    - name: Set up GCloud CLI
+      uses: google-github-actions/setup-gcloud@v1
+
+    # Login to Docker Hub
+    - name: Docker Hub Login
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    # Build and Push to Docker Hub
+    - name: Build & Push Docker Image
+      run: |
+        docker build -t $DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG ./app
+        docker push $DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG
+
+    # Deploy to GKE using Terraform
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Terraform Init
+      run: terraform init -backend-config="bucket=$GCP_TF_STATE_BUCKET" -backend-config="prefix=prod"
+      working-directory: ./terraform
+
+    - name: Terraform Plan
+      run: |
+        terraform plan \
+        -var="project_id=$GCP_PROJECT_ID" \
+        -var="region=us-central1" \
+        -var="container_image=$DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG" \
+        -out=tfplan
+      working-directory: ./terraform
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve tfplan
+      working-directory: ./terraform
