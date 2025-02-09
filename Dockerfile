@@ -1,17 +1,18 @@
-# Use the official Python 3.9 image (Ubuntu-based)
+# Use a slim Python 3.9 image
 FROM python:3.9.5-slim-buster
 
-# Install system dependencies
-RUN apt update -y
+# Install system dependencies (including libgomp1 to fix the shared library error)
+RUN apt-get update -y && \
+    apt-get install -y libgomp1
 
-# Set the working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the application code
+# Copy the local code to the container
 COPY . /app
 
-# Upgrade pip and install Python dependencies
-RUN app-get update && pip install -r requirements.txt
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Run the application directly with Python
 CMD ["python", "app.py"]
