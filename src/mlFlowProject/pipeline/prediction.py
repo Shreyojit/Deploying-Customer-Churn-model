@@ -8,8 +8,8 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 class PredictionPipeline:
-    def __init__(self, preprocessor_path='artifacts/data_transformation/preprocessor.joblib', 
-                 model_path='artifacts/model_trainer/model.joblib'):
+    def __init__(self, preprocessor_path='src/mlFlowProject/utils/prediction_utils/preprocessor.joblib', 
+                 model_path='src/mlFlowProject/utils/prediction_utils/model.joblib'):
         self.preprocessor_path = preprocessor_path
         self.model_path = model_path
         

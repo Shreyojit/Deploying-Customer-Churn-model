@@ -65,9 +65,3 @@ jobs:
       run: terraform apply -auto-approve tfplan
       working-directory: ./terraform
 
-    # Get the external IP of the deployed service
-    - name: Get Service IP
-      run: |
-        gcloud container clusters get-credentials my-gke-cluster --region=asia-south1 --project=$GCP_PROJECT_ID
-        kubectl get service flask-app-service -o jsonpath="{.status.loadBalancer.ingress[0].ip}"
-      working-directory: ./terraform
