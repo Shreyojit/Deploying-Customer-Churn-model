@@ -26,8 +26,7 @@ WORKDIR /app
 COPY . /app
 
 # Upgrade pip and install Python dependencies
-RUN pip install --no-cache-dir --upgrade pip setuptools && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Run the application directly with Python
 CMD ["python", "app.py"]
