@@ -34,10 +34,14 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    # List directory contents for debugging
+    - name: List directory contents for debugging
+      run: ls -R
+
     # Build and Push to Docker Hub
     - name: Build & Push Docker Image
       run: |
-        docker build -t $DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG ./app
+        docker build -t $DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG .
         docker push $DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG
 
     # Deploy to GKE using Terraform
@@ -52,7 +56,7 @@ jobs:
       run: |
         terraform plan \
         -var="project_id=$GCP_PROJECT_ID" \
-        -var="region=us-central1" \
+        -var="region=asia-south1" \  # Update the region here to asia-south1
         -var="container_image=$DOCKERHUB_USERNAME/flask-app:$IMAGE_TAG" \
         -out=tfplan
       working-directory: ./terraform
